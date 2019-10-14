@@ -99,7 +99,6 @@ export default Component.extend({
           {
             this.activeid=properties.nodes;
             var ids = properties.nodes;
-            
             activeid=ids
             document.getElementById("p1").innerHTML =ids;
             $( "#p1" ).trigger( "click" );
