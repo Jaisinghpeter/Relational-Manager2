@@ -1,0 +1,27 @@
+{{yield}}
+
+  <script type="text/javascript" src="https://unpkg.com/vis-network@latest/dist/vis-network.min.js"></script> 
+  <link href="https://unpkg.com/vis-network@latest/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+  <script src="//qtip2.com/v/stable/jquery.qtip.js"></script>
+  <link href="//qtip2.com/v/stable/jquery.qtip.css" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+    #mynetwork {
+      width: 500px;
+      height: 300px;
+      border: 1px solid lightgray;
+      overflow: scroll;
+    }
+    #mynetwork2 {
+      width: 500px;
+      height: 300px;
+      border: 1px solid lightgray;
+    }
+  </style> 
+    
+    <button {{action "getgraph"}}>Button</button>
+    {{!-- <div style="max-height: 100%;max-width:50%;overflow: auto;"> --}}
+<div id="mynetwork"></div>
+<div id="mynetwork2"></div>
+<p id="p1" {{action "consoleevent"}}>Hello World</p>
+ <button {{action "getactiveid"}}>Button</button>
+{{!-- </div> --}} 
