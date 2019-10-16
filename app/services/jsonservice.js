@@ -1,5 +1,6 @@
 import Service from '@ember/service';
 import faker from 'faker';
+
 export default Service.extend({
     store: Ember.inject.service(),
     JSONArray:[
@@ -737,7 +738,7 @@ export default Service.extend({
               })
         }
         
-        var val=this.store.peekRecord('profile', 102)
+        // var val=this.store.peekRecord('profile', 102)
         // console.log(val.detail.get('name'))
         // console.log("This is in service")
 
@@ -746,7 +747,7 @@ export default Service.extend({
     getstore(){
         var valarr=this.store.peekAll('profile')
         for(var i=0;i<valarr._length;i++){
-            var prof=valarr.objectAt(i).detail.get('name')
+            // var prof=valarr.objectAt(i).detail.get('name')
         }
         
 
