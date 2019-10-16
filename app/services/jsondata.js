@@ -113,10 +113,10 @@ export default Service.extend({
                     labelname:this.JSONArray[i].datas[j].name
                 })
                 parentid=idcounter
-                edgeList.pushObject({
-                    from:parseInt(rootid),
-                    to:parseInt(parentid)
-                })
+                // edgeList.pushObject({
+                //     from:parseInt(rootid),
+                //     to:parseInt(parentid)
+                // })
                 for(k=0;k<this.JSONArray[i].datas[j].datas.length;k++){
                     if(this.JSONArray[i].datas[j].datas[k].type=='Student'){
                         nodeList.pushObject({
@@ -154,7 +154,7 @@ export default Service.extend({
         //  console.log(returnList)
         return returnList
        },
-       getoption2(){
+       getoption(){
         return {
             interaction: {
                 hover: true
@@ -165,96 +165,76 @@ export default Service.extend({
                 Teacher: {color:{background:'#92a8d1'}, borderWidth:3},
                 Subject: {color:{background:'#b5e7a0'}, borderWidth:3}
               },
-            physics: {barnesHut: {springLength:100, springConstant: 0.01}},
-              
-            layout:{
-                hierarchical: {
-                    enabled:false,
-                    sortMethod: 'directed'
-                }
+            edges:{
+                labelHighlightBold: false,
+                chosen:true,
+                selectionWidth: function (width) {return width*3;}
             },
             physics:{
-                barnesHut:{
-                    springLength:50
-                }
-            },
-            nodes:{
-                chosen:true,
-                font:{
-                    size:20
-                }
-            },
-            
-            // physics: false,
-            autoResize: false,
-            height: '100%',
-            width: '100%',
-            edges:{
-                labelHighlightBold: false,
-                chosen:true,
-                selectionWidth: function (width) {return width*3;}
-            },
-            nodes:{
-                widthConstraint:
-                { minimum: 150, maximum: 176,},
-   
+                enabled: true,
+                barnesHut: {
+                  gravitationalConstant: -2000,
+                  centralGravity: .2,
+                  springLength: 95,
+                  springConstant: 0.04,
+                  damping: 0.09,
+                  avoidOverlap: 0
+                },
+                forceAtlas2Based: {
+                  gravitationalConstant: -50,
+                  centralGravity: 0.01,
+                  springConstant: 0.08,
+                  springLength: 100,
+                  damping: 0.4,
+                  avoidOverlap: 0
+                },
+                repulsion: {
+                  centralGravity: 0.2,
+                  springLength: 200,
+                  springConstant: 0.05,
+                  nodeDistance: 100,
+                  damping: 0.09
+                },
+                hierarchicalRepulsion: {
+                  centralGravity: 0.0,
+                  springLength: 100,
+                  springConstant: 0.01,
+                  nodeDistance: 100,
+                  damping: 0.09
+                },
+                maxVelocity: 50,
+                minVelocity: 0.01,
+                solver: 'repulsion',
+                stabilization: {
+                  enabled: true,
+                  iterations: 1000,
+                  updateInterval: 100,
+                  onlyDynamicEdges: false,
+                  fit: true
+                },
+                timestep: 0.5,
+                adaptiveTimestep: false
+              },
+            nodes:{ 
                 borderWidthSelected:1,
+                value:15,
+                shape:'circularImage',
+                scaling:{
+                    min:20,
+                    max:50
+                },
+                image:'',
+                widthConstraint:{
+                    minimum:10,
+                    maximum:45
+                },
                 color: {
                     border:'#2B7CE9',
-                    // background: '#97C2FC'
                 },
                 size:5,
-                widthConstraint: false,
                 chosen:{
                     node:true
-                }
-            }
-          }
-       },
-       getoption(){
-           return {
-            interaction: {
-                hover: true,
-                dragNodes:false
-            },
-            groups: {
-                Principle: {color:{background:'#d6cbd3'}, borderWidth:3},
-                Student: {color:{background:'#eca1a6'}, borderWidth:3},
-                Teacher: {color:{background:'#92a8d1'}, borderWidth:3},
-                Subject: {color:{background:'#b5e7a0'}, borderWidth:3}
-              },
-            physics: {barnesHut: {springLength:100, springConstant: 0.01}},
-            layout:{
-                hierarchical: {
-                    enabled:true,
-                    sortMethod: 'directed'
-                }
-            },
-            // physics:{enabled:false},
-            physics: false,
-            autoResize: false,
-            height: '100%',
-            width: '100%',
-            edges:{
-                labelHighlightBold: false,
-                chosen:false,
-                selectionWidth: function (width) {return width*3;}
-            },
-            nodes:{
-                widthConstraint:
-                { minimum: 150, maximum: 176,},
-   
-                borderWidthSelected:1,
-                color: {
-                    border:'#2B7CE9',
-                    // background: '#97C2FC',
-                    highlight:{
-                        // background:'#D2E5FF'
-                    }
                 },
-                size:5,
-                widthConstraint: false,
-                chosen:true,
                 font:{
                     size:20
                 }
