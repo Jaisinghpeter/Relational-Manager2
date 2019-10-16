@@ -131,13 +131,13 @@ export default Component.extend({
                       })
                        }
                        else{
-                           if(checkedgePrensent(val.friend.get('work')[i],id)){
+                           if(checkedgePrensent(val.friend.get('college')[i],id)){
                             edges.update({
                                 from:id,
                                 to:prof.id,
                                 label:'College',
                                 color:{color:'#ff383f'},
-                                group:'Work'
+                                group:'college'
                             })
                            }
                        }
@@ -166,9 +166,9 @@ export default Component.extend({
                 content=content+"College :"+plam.detail.get('college')+"<br>"
                 content=content+"Work :"+plam.detail.get('work')+"<br>"
                 
-                  console.log(params.node)
+                  // console.log(params.node)
                   
-                  console.log(plam.detail.get('college'))
+                  // console.log(plam.detail.get('college'))
                 $('#mynetwork').qtip({
                     // content=this.content
                     content: content,

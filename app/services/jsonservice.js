@@ -9,7 +9,7 @@ export default Service.extend({
             details:{
                 name:faker.name.firstName(),
                 college:"Jerusalem",
-                work:"Zoho",
+                work:faker.company.companyName(),
                 gender:"male"
             },
             friends:{
