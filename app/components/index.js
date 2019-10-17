@@ -85,6 +85,7 @@ export default Component.extend({
                   var templist=[]
                   // console.log(val.detail.get('college')) 
                   for(var i=0;i<val.friend.length;i++){
+                    try{
                     var prof=st.peekRecord('profile', val.friend[i])
                     if(!templist.includes(val.friend[i])){
                       var group,color
@@ -144,6 +145,10 @@ export default Component.extend({
                        }
                     } 
                   }
+                  catch{
+                    console.log("SOme thing Wrong Happended")
+                  }
+                }
                   this.activeid=properties.nodes;
                   var ids = properties.nodes;
                   var id=ids[0]
@@ -257,6 +262,7 @@ export default Component.extend({
             nodes:{ 
                 borderWidthSelected:1,
                 value:15,
+                brokenImage:"http://localhost:4200/avatar.png",
                 shape:'circularImage',
                 scaling:{
                     min:20,

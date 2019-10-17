@@ -23,7 +23,7 @@ export default Service.extend({
                 work:faker.company.companyName(),
                 gender:"male"
             },
-            friends:[101,103,105,106,107]
+            friends:[105,106,107]
         },
         {
             id:"103",
