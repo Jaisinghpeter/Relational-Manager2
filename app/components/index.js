@@ -176,7 +176,7 @@ export default Component.extend({
                 attributes = Ember.get(Detail, 'attributes')
                 attributes.forEach(function(meta, name) {
                   content=content+name+" : "+plam.detail.get(name)+"<br>"
-                  console.log(name)
+                  // console.log(name)
                 })
                 $('#mynetwork').qtip({
                     content: content,
