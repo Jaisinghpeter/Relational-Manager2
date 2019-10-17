@@ -20,10 +20,10 @@ export default Component.extend({
             this.nodeList.pushObject({
                 id:prof.id,
                 college:prof.detail.get('college'),
-                label:prof.detail.get('name'),
+                label:prof.personalinfo.get('name'),
                 work:prof.detail.get('name'),
                 image:faker.image.avatar(),
-                gender:prof.detail.get('gender'),
+                gender:prof.personalinfo.get('gender'),
             })            
               var nodes = new vis.DataSet(this.nodeList)
               var edges = new vis.DataSet(this.edgeList)
@@ -119,10 +119,10 @@ export default Component.extend({
                         nodes.update({
                         id:prof.id,
                         college:prof.detail.get('college'),
-                        label:prof.detail.get('name'),
-                        work:prof.detail.get('name'),
+                        label:prof.personalinfo.get('name'),
+                        work:prof.detail.get('work'),
                         image:faker.image.avatar(),
-                        gender:prof.detail.get('gender'),
+                        gender:prof.personalinfo.get('gender'),
                       })
                       edges.update({
                           from:id,
@@ -168,7 +168,7 @@ export default Component.extend({
                 var plam=getnodeProfile(params.node)
                 var content=''
                 content=content+"<center>Details<center><br>"
-                content=content+"Name :"+plam.detail.get('name')+"<br>"
+                content=content+"Name :"+plam.personalinfo.get('name')+"<br>"
                 content=content+"College :"+plam.detail.get('college')+"<br>"
                 content=content+"Work :"+plam.detail.get('work')+"<br>"
                 

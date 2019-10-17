@@ -7,31 +7,38 @@ export default Service.extend({
         {
             id:"101",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
-                work:"Zoho",
-                gender:"male"
+                work:"Zoho", 
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[102,103,104]
-  
+            
         },
         {
             id:"102",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:faker.company.companyName(),
-                gender:"male"
             },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
+            },
+            
             friends:[105,106,107]
         },
         {
             id:"103",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[106,107,108,105]
   
@@ -39,10 +46,12 @@ export default Service.extend({
         {
             id:"104",
             details:{
-                name:faker.name.firstName(),
                 college:"Sai Ram",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[109,110,111,112]
   
@@ -50,10 +59,12 @@ export default Service.extend({
         {
             id:"105",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[113,114,115,116]
   
@@ -61,10 +72,12 @@ export default Service.extend({
         {
             id:"106",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[117,118,119,120,121]
   
@@ -72,10 +85,12 @@ export default Service.extend({
         {
             id:"107",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[122]
   
@@ -83,10 +98,12 @@ export default Service.extend({
         {
             id:"108",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[123,125,126,127,128]
   
@@ -94,10 +111,12 @@ export default Service.extend({
         {
             id:"109",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -105,10 +124,12 @@ export default Service.extend({
         {
             id:"110",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -116,10 +137,12 @@ export default Service.extend({
         {
             id:"111",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -127,10 +150,12 @@ export default Service.extend({
         {
             id:"112",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -138,10 +163,12 @@ export default Service.extend({
         {
             id:"113",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -149,10 +176,12 @@ export default Service.extend({
         {
             id:"114",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -160,10 +189,12 @@ export default Service.extend({
         {
             id:"115",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -171,10 +202,12 @@ export default Service.extend({
         {
             id:"116",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -182,10 +215,12 @@ export default Service.extend({
         {
             id:"117",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -193,10 +228,12 @@ export default Service.extend({
         {
             id:"118",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -204,10 +241,12 @@ export default Service.extend({
         {
             id:"119",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -215,10 +254,12 @@ export default Service.extend({
         {
             id:"120",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -226,10 +267,12 @@ export default Service.extend({
         {
             id:"121",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -237,10 +280,12 @@ export default Service.extend({
         {
             id:"122",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -248,10 +293,12 @@ export default Service.extend({
         {
             id:"123",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -259,10 +306,12 @@ export default Service.extend({
         {
             id:"124",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -270,10 +319,12 @@ export default Service.extend({
         {
             id:"125",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -281,10 +332,12 @@ export default Service.extend({
         {
             id:"126",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -292,10 +345,12 @@ export default Service.extend({
         {
             id:"127",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -303,10 +358,12 @@ export default Service.extend({
         {
             id:"128",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -314,10 +371,12 @@ export default Service.extend({
         {
             id:"129",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -325,10 +384,12 @@ export default Service.extend({
         {
             id:"130",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -336,10 +397,12 @@ export default Service.extend({
         {
             id:"131",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -347,10 +410,12 @@ export default Service.extend({
         {
             id:"132",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -358,10 +423,12 @@ export default Service.extend({
         {
             id:"133",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -369,10 +436,12 @@ export default Service.extend({
         {
             id:"134",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -380,10 +449,12 @@ export default Service.extend({
         {
             id:"135",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -391,10 +462,12 @@ export default Service.extend({
         {
             id:"136",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -402,10 +475,12 @@ export default Service.extend({
         {
             id:"137",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -413,10 +488,12 @@ export default Service.extend({
         {
             id:"138",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -424,10 +501,12 @@ export default Service.extend({
         {
             id:"139",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -435,10 +514,12 @@ export default Service.extend({
         {
             id:"140",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -446,10 +527,12 @@ export default Service.extend({
         {
             id:"141",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -457,10 +540,12 @@ export default Service.extend({
         {
             id:"142",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -468,10 +553,12 @@ export default Service.extend({
         {
             id:"143",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -479,10 +566,12 @@ export default Service.extend({
         {
             id:"144",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -490,10 +579,12 @@ export default Service.extend({
         {
             id:"145",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -501,10 +592,12 @@ export default Service.extend({
         {
             id:"146",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -512,10 +605,12 @@ export default Service.extend({
         {
             id:"147",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -523,10 +618,12 @@ export default Service.extend({
         {
             id:"148",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -534,10 +631,12 @@ export default Service.extend({
         {
             id:"149",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -545,10 +644,12 @@ export default Service.extend({
         {
             id:"150",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -556,10 +657,12 @@ export default Service.extend({
         {
             id:"151",
             details:{
-                name:faker.name.firstName(),
                 college:"Jerusalem",
                 work:"Zoho",
-                gender:"male"
+            },
+            personalinfo:{
+                gender:"male",
+                name:faker.name.firstName(),
             },
             friends:[]
   
@@ -569,27 +672,21 @@ export default Service.extend({
     getjsonservice(){
         for(var i=0;i<this.JSONArray.length;i++){
             var detail=this.store.createRecord('detail', {
-                name: this.JSONArray[i].details.name,
                 college: this.JSONArray[i].details.college,
                 work: this.JSONArray[i].details.work,
-                gender: this.JSONArray[i].details.gender,
               });
               var friend=this.JSONArray[i].friends
-            //   var friend=this.store.createRecord('friend', {
-            //     college: this.JSONArray[i].friends.college,
-            //     work: this.JSONArray[i].friends.work,
-            //   });
+              var personalinfo=this.store.createRecord('personalinfo', {
+                name: this.JSONArray[i].personalinfo.name,
+                gender: this.JSONArray[i].personalinfo.gender,
+              });
               this.store.createRecord('profile',{
                   id:parseInt(this.JSONArray[i].id),
                   detail:detail,
-                  friend:friend
+                  friend:friend,
+                  personalinfo:personalinfo
               })
         }
-        
-        // var val=this.store.peekRecord('profile', 102)
-        // console.log(val.detail.get('name'))
-        // console.log("This is in service")
-
         this.getstore()
     },
     getstore(){
