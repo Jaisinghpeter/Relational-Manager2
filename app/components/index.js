@@ -67,6 +67,14 @@ export default Component.extend({
                 else
                   return true
             }
+            function getgroupname(val1,val2){
+              // console.log("X"+val1)
+              // console.log("Y"+val2)
+              if(val1==val2)
+                return true
+              else  
+                return false
+            }
               network.on('click', function(properties) {
                 if(properties.nodes[0]){
                   if(lastclicked){
@@ -75,11 +83,38 @@ export default Component.extend({
                   var id=properties.nodes[0]
                   var val=getnodeProfile(id)
                   var templist=[]
-                  for(var i=0;i<val.friend.get('work').length;i++){
-                    var prof=st.peekRecord('profile', val.friend.get('work')[i])
-                    if(!templist.includes(val.friend.get('work')[i])){
-                       if(checkifNodePresent(val.friend.get('work')[i])){
-                        templist.pushObject(val.friend.get('work')[i])
+                  // console.log(val.detail.get('college')) 
+                  for(var i=0;i<val.friend.length;i++){
+                    var prof=st.peekRecord('profile', val.friend[i])
+                    if(!templist.includes(val.friend[i])){
+                      var group,color
+                      if((getgroupname(val.detail.get('college'),prof.detail.get('college'))
+                      && (getgroupname(val.detail.get('work'),prof.detail.get('work'))))
+                      ){
+                        group="Friends"
+                        color="#000000"
+                      }
+                      else if((getgroupname(val.detail.get('college'),prof.detail.get('college')))
+                      ){
+                        group="College"
+                        color="#FF0000"
+                      }
+                      else if((getgroupname(val.detail.get('work'),prof.detail.get('work')))
+                      ){
+                        group="Work"
+                        color="#0000FF"
+                      }
+                      else{
+                        group="Acquitance"
+                        color="#00FF00"
+                      }
+                      // console.log(getgroupname(val.detail.get('work'),prof.detail.get('work')))
+                      
+                      var college=getgroupname(val.detail.get('college'),prof.detail.get('college'))
+                      var work=getgroupname(val.detail.get('work'),prof.detail.get('work'))
+                      var work=getgroupname(val.detail.get('work'),prof.detail.get('work'))
+                       if(checkifNodePresent(val.friend[i])){
+                        templist.pushObject(val.friend[i])
                         nodes.update({
                         id:prof.id,
                         college:prof.detail.get('college'),
@@ -91,53 +126,19 @@ export default Component.extend({
                       edges.update({
                           from:id,
                           to:prof.id,
-                          color:{color:'#000'},
-                          label:'Work',
-                          group:'Work'
+                          color:{color:color},
+                          label:group,
+                          group:group
                       })
                        }
                        else{
-                           if(checkedgePrensent(val.friend.get('work')[i],id)){
+                           if(checkedgePrensent(val.friend[i],id)){
                             edges.update({
                                 from:id,
                                 to:prof.id,
-                                label:'Work',
-                                color:{color:'#000'},
-                                group:'Work'
-                            })
-                           }
-                       }
-                    } 
-                  }
-                  for(var i=0;i<val.friend.get('college').length;i++){
-                    var prof=st.peekRecord('profile', val.friend.get('college')[i])
-                    if(!templist.includes(val.friend.get('college')[i])){
-                       if(checkifNodePresent(val.friend.get('college')[i])){
-                        templist.pushObject(val.friend.get('college')[i])
-                        nodes.update({
-                        id:prof.id,
-                        college:prof.detail.get('college'),
-                        label:prof.detail.get('name'),
-                        work:prof.detail.get('name'),
-                        image:faker.image.avatar(),
-                        gender:prof.detail.get('gender'),
-                      })
-                      edges.update({
-                          from:id,
-                          to:prof.id,
-                          label:'College',
-                          color:{color:'#ff383f'},
-                          group:'college'
-                      })
-                       }
-                       else{
-                           if(checkedgePrensent(val.friend.get('college')[i],id)){
-                            edges.update({
-                                from:id,
-                                to:prof.id,
-                                label:'College',
-                                color:{color:'#ff383f'},
-                                group:'college'
+                                label:group,
+                                color:{color:color},
+                                group:group
                             })
                            }
                        }
@@ -242,7 +243,7 @@ export default Component.extend({
                 },
                 maxVelocity: 50,
                 minVelocity: 0.01,
-                solver: 'repulsion',
+                solver: 'barnesHut',
                 stabilization: {
                   enabled: true,
                   iterations: 1000,

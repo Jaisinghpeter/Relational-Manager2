@@ -9,13 +9,10 @@ export default Service.extend({
             details:{
                 name:faker.name.firstName(),
                 college:"Jerusalem",
-                work:faker.company.companyName(),
+                work:"Zoho",
                 gender:"male"
             },
-            friends:{
-            college:[102,103],
-            work:[104,105]
-            }
+            friends:[102,103,104]
   
         },
         {
@@ -23,13 +20,10 @@ export default Service.extend({
             details:{
                 name:faker.name.firstName(),
                 college:"Jerusalem",
-                work:"Zoho",
+                work:faker.company.companyName(),
                 gender:"male"
             },
-            friends:{
-				college:[106,107],
-				work:[108,109]
-				}
+            friends:[101,103,105,106,107]
         },
         {
             id:"103",
@@ -39,24 +33,18 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-            college:[110,111],
-            work:[112,113]
-            }
+            friends:[106,107,108,105]
   
         },
         {
             id:"104",
             details:{
                 name:faker.name.firstName(),
-                college:"Jerusalem",
+                college:"Sai Ram",
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-            college:[114,115],
-            work:[116,117]
-            }
+            friends:[109,110,111,112]
   
         },
         {
@@ -67,10 +55,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[118,119],
-	work:[120]
-	}
+            friends:[113,114,115,116]
   
         },
         {
@@ -81,10 +66,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[121,122],
-	work:[123,124]
-	}
+            friends:[117,118,119,120,121]
   
         },
         {
@@ -95,10 +77,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[125,126],
-	work:[127,128]
-	}
+            friends:[122]
   
         },
         {
@@ -109,10 +88,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[123,125,126,127,128]
   
         },
         {
@@ -123,10 +99,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -137,10 +110,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -151,10 +121,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -165,10 +132,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -179,10 +143,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -193,10 +154,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -207,10 +165,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -221,10 +176,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -235,10 +187,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -249,10 +198,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -263,10 +209,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -277,10 +220,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -291,10 +231,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -305,10 +242,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -319,10 +253,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -333,10 +264,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -347,10 +275,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -361,10 +286,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -375,10 +297,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -389,10 +308,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -403,10 +319,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -417,10 +330,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -431,10 +341,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -445,10 +352,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -459,10 +363,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -473,10 +374,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -487,10 +385,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -501,10 +396,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -515,10 +407,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -529,10 +418,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -543,10 +429,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -557,10 +440,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -571,10 +451,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -585,10 +462,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -599,10 +473,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -613,10 +484,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -627,10 +495,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -641,10 +506,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -655,10 +517,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -669,10 +528,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -683,10 +539,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -697,10 +550,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         },
         {
@@ -711,10 +561,7 @@ export default Service.extend({
                 work:"Zoho",
                 gender:"male"
             },
-            friends:{
-	college:[],
-	work:[]
-	}
+            friends:[]
   
         }
     ],
@@ -727,10 +574,11 @@ export default Service.extend({
                 work: this.JSONArray[i].details.work,
                 gender: this.JSONArray[i].details.gender,
               });
-              var friend=this.store.createRecord('friend', {
-                college: this.JSONArray[i].friends.college,
-                work: this.JSONArray[i].friends.work,
-              });
+              var friend=this.JSONArray[i].friends
+            //   var friend=this.store.createRecord('friend', {
+            //     college: this.JSONArray[i].friends.college,
+            //     work: this.JSONArray[i].friends.work,
+            //   });
               this.store.createRecord('profile',{
                   id:parseInt(this.JSONArray[i].id),
                   detail:detail,
