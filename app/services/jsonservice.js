@@ -11,8 +11,7 @@ export default Service.extend({
             id:"101",
             details:{
                 college:"Jerusalem",
-                work:"Zoho", 
-               work:"Zoho", 
+            work:"Zoho", 
             },
             personalinfo:{
                 gender:"male",
