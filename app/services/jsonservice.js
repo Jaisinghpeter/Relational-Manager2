@@ -1,6 +1,9 @@
 import Service from '@ember/service';
 import faker from 'faker';
-
+import Ember from 'ember';
+import PersonalINFO from '../models/personalinfo';
+import Profile from '../models/profile';
+import Detail from '../models/detail';
 export default Service.extend({
     store: Ember.inject.service(),
     JSONArray:[
@@ -9,6 +12,7 @@ export default Service.extend({
             details:{
                 college:"Jerusalem",
                 work:"Zoho", 
+               work:"Zoho", 
             },
             personalinfo:{
                 gender:"male",
@@ -21,7 +25,7 @@ export default Service.extend({
             id:"102",
             details:{
                 college:"Jerusalem",
-                work:faker.company.companyName(),
+                work:"Zoho",
             },
             personalinfo:{
                 gender:"male",
@@ -34,20 +38,20 @@ export default Service.extend({
             id:"103",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[106,107,108,105]
+            friends:[106,108,105]
   
         },
         {
             id:"104",
             details:{
                 college:"Sai Ram",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -60,7 +64,7 @@ export default Service.extend({
             id:"105",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -73,7 +77,7 @@ export default Service.extend({
             id:"106",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -86,7 +90,7 @@ export default Service.extend({
             id:"107",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -99,7 +103,7 @@ export default Service.extend({
             id:"108",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -112,7 +116,7 @@ export default Service.extend({
             id:"109",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -125,7 +129,7 @@ export default Service.extend({
             id:"110",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -138,7 +142,7 @@ export default Service.extend({
             id:"111",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -151,7 +155,7 @@ export default Service.extend({
             id:"112",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -164,7 +168,7 @@ export default Service.extend({
             id:"113",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -177,7 +181,7 @@ export default Service.extend({
             id:"114",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -190,7 +194,7 @@ export default Service.extend({
             id:"115",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -203,7 +207,7 @@ export default Service.extend({
             id:"116",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -216,7 +220,7 @@ export default Service.extend({
             id:"117",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -229,7 +233,7 @@ export default Service.extend({
             id:"118",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -242,7 +246,7 @@ export default Service.extend({
             id:"119",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -255,7 +259,7 @@ export default Service.extend({
             id:"120",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -268,7 +272,7 @@ export default Service.extend({
             id:"121",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -281,7 +285,7 @@ export default Service.extend({
             id:"122",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -294,7 +298,7 @@ export default Service.extend({
             id:"123",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -307,7 +311,7 @@ export default Service.extend({
             id:"124",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -320,7 +324,7 @@ export default Service.extend({
             id:"125",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -333,7 +337,7 @@ export default Service.extend({
             id:"126",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -346,7 +350,7 @@ export default Service.extend({
             id:"127",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -359,7 +363,7 @@ export default Service.extend({
             id:"128",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -372,7 +376,7 @@ export default Service.extend({
             id:"129",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -385,7 +389,7 @@ export default Service.extend({
             id:"130",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -398,7 +402,7 @@ export default Service.extend({
             id:"131",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -411,7 +415,7 @@ export default Service.extend({
             id:"132",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -424,7 +428,7 @@ export default Service.extend({
             id:"133",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -437,7 +441,7 @@ export default Service.extend({
             id:"134",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -450,7 +454,7 @@ export default Service.extend({
             id:"135",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -463,7 +467,7 @@ export default Service.extend({
             id:"136",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -476,7 +480,7 @@ export default Service.extend({
             id:"137",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -489,7 +493,7 @@ export default Service.extend({
             id:"138",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -502,7 +506,7 @@ export default Service.extend({
             id:"139",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -515,7 +519,7 @@ export default Service.extend({
             id:"140",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -528,7 +532,7 @@ export default Service.extend({
             id:"141",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -541,7 +545,7 @@ export default Service.extend({
             id:"142",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -554,7 +558,7 @@ export default Service.extend({
             id:"143",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -567,7 +571,7 @@ export default Service.extend({
             id:"144",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -580,7 +584,7 @@ export default Service.extend({
             id:"145",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -593,7 +597,7 @@ export default Service.extend({
             id:"146",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -606,7 +610,7 @@ export default Service.extend({
             id:"147",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -619,7 +623,7 @@ export default Service.extend({
             id:"148",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -632,7 +636,7 @@ export default Service.extend({
             id:"149",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -645,7 +649,7 @@ export default Service.extend({
             id:"150",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -658,7 +662,7 @@ export default Service.extend({
             id:"151",
             details:{
                 college:"Jerusalem",
-                work:"Zoho",
+               work:faker.company.companyName(),
             },
             personalinfo:{
                 gender:"male",
@@ -671,20 +675,14 @@ export default Service.extend({
     
     getjsonservice(){
         for(var i=0;i<this.JSONArray.length;i++){
-            var detail=this.store.createRecord('detail', {
-                college: this.JSONArray[i].details.college,
-                work: this.JSONArray[i].details.work,
-              });
+            var detail=this.store.createRecord('detail', this.JSONArray[i].details);
               var friend=this.JSONArray[i].friends
-              var personalinfo=this.store.createRecord('personalinfo', {
-                name: this.JSONArray[i].personalinfo.name,
-                gender: this.JSONArray[i].personalinfo.gender,
-              });
+              var personalinfo=this.store.createRecord('personalinfo', this.JSONArray[i].personalinfo);
               this.store.createRecord('profile',{
                   id:parseInt(this.JSONArray[i].id),
                   detail:detail,
                   friend:friend,
-                  personalinfo:personalinfo
+                  personalinfo:personalinfo,
               })
         }
         this.getstore()

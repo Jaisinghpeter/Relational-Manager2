@@ -1,6 +1,10 @@
 import Component from '@ember/component';
 import faker from 'faker';
 import { inject as service } from '@ember/service';
+import Ember from 'ember';
+import PersonalINFO from '../models/personalinfo';
+import Profile from '../models/profile';
+import Detail from '../models/detail';
 export default Component.extend({
     store: Ember.inject.service(),
     cart: service('jsonservice'),
@@ -67,13 +71,34 @@ export default Component.extend({
                 else
                   return true
             }
+            var colorrecord=[];
+                  let attributes = Ember.get(Detail, 'attributes')
+                      attributes.forEach(function(meta, name) {
+                        colorrecord.pushObject({
+                          group:name,
+                          color:faker.internet.color(),
+                          
+                        })
+                      });
+                  // console.log(colorrecord)
             function getgroupname(val1,val2){
-              // console.log("X"+val1)
-              // console.log("Y"+val2)
-              if(val1==val2)
-                return true
-              else  
-                return false
+              var returnlist= {
+                group:"friends",
+                color:"#000"
+              }
+              let attributes = Ember.get(Detail, 'attributes')
+                      attributes.forEach(function(meta, name) {
+                        if(val2.get(name)==val1.get(name)){
+                          // console.log(colorrecord.length)
+                          for(var i=0;i<colorrecord.length;i++){
+                            if(colorrecord[i].group==name){
+                              returnlist.group=colorrecord[i].group
+                              returnlist.color=colorrecord[i].color
+                            }
+                          }
+                        }
+                      });
+              return returnlist
             }
               network.on('click', function(properties) {
                 if(properties.nodes[0]){
@@ -88,32 +113,8 @@ export default Component.extend({
                     try{
                     var prof=st.peekRecord('profile', val.friend[i])
                     if(!templist.includes(val.friend[i])){
-                      var group,color
-                      if((getgroupname(val.detail.get('college'),prof.detail.get('college'))
-                      && (getgroupname(val.detail.get('work'),prof.detail.get('work'))))
-                      ){
-                        group="Friends"
-                        color="#000000"
-                      }
-                      else if((getgroupname(val.detail.get('college'),prof.detail.get('college')))
-                      ){
-                        group="College"
-                        color="#FF0000"
-                      }
-                      else if((getgroupname(val.detail.get('work'),prof.detail.get('work')))
-                      ){
-                        group="Work"
-                        color="#0000FF"
-                      }
-                      else{
-                        group="Acquitance"
-                        color="#00FF00"
-                      }
-                      // console.log(getgroupname(val.detail.get('work'),prof.detail.get('work')))
-                      
-                      var college=getgroupname(val.detail.get('college'),prof.detail.get('college'))
-                      var work=getgroupname(val.detail.get('work'),prof.detail.get('work'))
-                      var work=getgroupname(val.detail.get('work'),prof.detail.get('work'))
+                      var colordict=getgroupname(val.detail,prof.detail)
+                      // console.log(colordict)
                        if(checkifNodePresent(val.friend[i])){
                         templist.pushObject(val.friend[i])
                         nodes.update({
@@ -127,9 +128,9 @@ export default Component.extend({
                       edges.update({
                           from:id,
                           to:prof.id,
-                          color:{color:color},
-                          label:group,
-                          group:group
+                          color:{color:colordict.color},
+                          label:colordict.group,
+                          group:colordict.group
                       })
                        }
                        else{
@@ -137,16 +138,16 @@ export default Component.extend({
                             edges.update({
                                 from:id,
                                 to:prof.id,
-                                label:group,
-                                color:{color:color},
-                                group:group
+                                label:colordict.group,
+                                color:{color:colordict.color},
+                                group:colordict.group
                             })
                            }
                        }
                     } 
                   }
-                  catch{
-                    console.log("SOme thing Wrong Happended")
+                  catch(e){
+                    console.log("SOme thing Wrong Happended"+e)
                   }
                 }
                   this.activeid=properties.nodes;
@@ -165,21 +166,22 @@ export default Component.extend({
                 
             },
             network.on('hoverNode',function(params){
-                var plam=getnodeProfile(params.node)
                 var content=''
-                content=content+"<center>Details<center><br>"
-                content=content+"Name :"+plam.personalinfo.get('name')+"<br>"
-                content=content+"College :"+plam.detail.get('college')+"<br>"
-                content=content+"Work :"+plam.detail.get('work')+"<br>"
-                
-                  // console.log(params.node)
-                  
-                  // console.log(plam.detail.get('college'))
+                content=content+"<center>Personal Informations<center><br>"
+                var plam=getnodeProfile(params.node)
+                let attributes = Ember.get(PersonalINFO, 'attributes')
+                      attributes.forEach(function(meta, name) {
+                        content=content+name+" : "+plam.personalinfo.get(name)+"<br>"
+                      })
+                attributes = Ember.get(Detail, 'attributes')
+                attributes.forEach(function(meta, name) {
+                  content=content+name+" : "+plam.detail.get(name)+"<br>"
+                  console.log(name)
+                })
                 $('#mynetwork').qtip({
-                    // content=this.content
                     content: content,
                       show: {
-                        event: event.type // original event
+                        event: event.type 
                       },
                       position: {
                         my: 'bottom left',
