@@ -12,6 +12,7 @@ export default Component.extend({
     edgeList:[],
     init(){
         this._super(...arguments)
+        this.get('cart')
         this.nodeList=[],
         this.edgeList=[]
     },

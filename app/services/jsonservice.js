@@ -4,6 +4,8 @@ import Ember from 'ember';
 import PersonalINFO from '../models/personalinfo';
 import Profile from '../models/profile';
 import Detail from '../models/detail';
+import jQuery from 'jquery'
+
 export default Service.extend({
     store: Ember.inject.service(),
     JSONArray:[
@@ -671,8 +673,28 @@ export default Service.extend({
   
         }
     ],
-    
+    JSONArray2:[],
+    init(){
+        this._super(...arguments)
+        // Enable the below to load from File
+        // this.setjson()
+    },
+    setjson(jsondata){
+        var jsondata
+        var myUrl='/jsondata.json'
+        $.ajax({
+            url: myUrl,
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+             jsondata=data
+            }
+          });
+        this.JSONArray=jsondata
+        console.log(this.JSONArray)
+    },
     getjsonservice(){
+        console.log(this.JSONArray2)
         for(var i=0;i<this.JSONArray.length;i++){
             var detail=this.store.createRecord('detail', this.JSONArray[i].details);
               var friend=this.JSONArray[i].friends
