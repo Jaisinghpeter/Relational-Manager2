@@ -40,6 +40,7 @@ export default Component.extend({
               var options = this.getOption();
               var network = new vis.Network(container, data, options);
               var lastclicked=null
+              
               function getnodeProfile(id)
               {
                   var val=st.peekRecord('profile', id)
@@ -75,9 +76,17 @@ export default Component.extend({
             var colorrecord=[];
                   let attributes = Ember.get(Detail, 'attributes')
                       attributes.forEach(function(meta, name) {
+                        var color
+                        if(name=='college'){
+                          color='#0000CD'
+                        }
+                        else{
+                          color="#00FF00"
+                        }
                         colorrecord.pushObject({
                           group:name,
-                          color:faker.internet.color(),
+                          // color:faker.internet.color(),
+                          color:color,
                           
                         })
                       });
@@ -85,7 +94,7 @@ export default Component.extend({
             function getgroupname(val1,val2){
               var returnlist= {
                 group:"friends",
-                color:"#000"
+                color:"#FF8C00"
               }
               let attributes = Ember.get(Detail, 'attributes')
                       attributes.forEach(function(meta, name) {
@@ -101,12 +110,28 @@ export default Component.extend({
                       });
               return returnlist
             }
+            function getEdgesOfNode(nodeId) {
+              return edges.get().filter(function (edge) {
+                return edge.from === nodeId || edge.to === nodeId;
+              });
+            }
+            network.on("oncontext", function (params) {
+              var clickednode=network.getNodeAt(params.pointer.DOM)
+              var deledge=getEdgesOfNode(clickednode)
+              for(var i=0;i<deledge.length;i++){
+                edges.remove(deledge[i])
+              }
+              console.log(deledge.length)
+              nodes.remove(clickednode)
+              console.log(clickednode)
+          });
               network.on('click', function(properties) {
                 if(properties.nodes[0]){
                   if(lastclicked){
-                    nodes.update({id: lastclicked, value:22})
+                    nodes.update({id: lastclicked, value:22,shape:'circularImage'})
                   }
                   var id=properties.nodes[0]
+                  nodes.update({id: id,shape:'image'})
                   var val=getnodeProfile(id)
                   var templist=[]
                   // console.log(val.detail.get('college')) 
@@ -120,6 +145,7 @@ export default Component.extend({
                         templist.pushObject(val.friend[i])
                         nodes.update({
                         id:prof.id,
+                        size:40,
                         college:prof.detail.get('college'),
                         label:prof.personalinfo.get('name'),
                         work:prof.detail.get('work'),
@@ -129,8 +155,9 @@ export default Component.extend({
                       edges.update({
                           from:id,
                           to:prof.id,
+                          color:{highlight:colordict.color},
                           color:{color:colordict.color},
-                          label:colordict.group,
+                          // label:colordict.group,
                           group:colordict.group
                       })
                        }
@@ -139,7 +166,7 @@ export default Component.extend({
                             edges.update({
                                 from:id,
                                 to:prof.id,
-                                label:colordict.group,
+                                // label:colordict.group,
                                 color:{color:colordict.color},
                                 group:colordict.group
                             })
@@ -166,6 +193,16 @@ export default Component.extend({
                 }
                 
             },
+            network.on('hoverEdge',function(params){
+              var from=st.peekRecord('profile', edges.get(params.edge).from)
+              var to=st.peekRecord('profile', edges.get(params.edge).to)
+              var result=getgroupname(from.detail,to.detail)
+              edges.update({id: params.edge, label:result.group})
+            }),
+            network.on('blurEdge',function(params){
+              // console.log(params.edge)
+              edges.update({id: params.edge, label:' '})
+            }),
             network.on('hoverNode',function(params){
                 var content=''
                 content=content+"<center>Personal Informations<center><br>"
@@ -179,11 +216,21 @@ export default Component.extend({
                   content=content+name+" : "+plam.detail.get(name)+"<br>"
                   // console.log(name)
                 })
-                $('#mynetwork').qtip({
-                    content: content,
+                $('#mynetwork').qtip(
+                  
+                  {
+                    content:{
+                      text:content
+                    } ,
                       show: {
-                        event: event.type 
+                        event: event.type ,
+                        solo: true,
+                        // event:event.eventPhase
                       },
+                      hide: {
+                        event:event.type
+                      },
+                      
                       position: {
                         my: 'bottom left',
                         target: 'mouse',
@@ -191,8 +238,12 @@ export default Component.extend({
                           x: 10, y: 10
                         }
                       }
-                    });
+                    }
+                  );
             }),
+            network.on('doubleClick',function(params){
+              console.log(params)
+          }),
             );  
             
             
@@ -214,8 +265,38 @@ export default Component.extend({
               },
             edges:{
                 labelHighlightBold: false,
+                length:125,
+                font:{
+                  size:8
+                },
+                width:2,
                 chosen:true,
                 selectionWidth: function (width) {return width*3;}
+            },
+              nodes:{ 
+                borderWidthSelected:1,
+                value:15,
+                brokenImage:"http://localhost:4200/avatar.png",
+                shape:'circularImage',
+                scaling:{
+                    min:20,
+                    max:50
+                },
+                image:'',
+                color: {
+                    border:'#2B7CE9',
+                },
+                size:5,
+                chosen:{
+                    node:true,
+                },
+                font:{
+                    size:13,
+                    color:"#fff",
+                    background:"#50b8e7",
+                    face:"Comic Sans MS",
+                    multi:"padding-left: 50px;",
+                },
             },
             physics:{
                 enabled: true,
@@ -262,31 +343,7 @@ export default Component.extend({
                 timestep: 0.5,
                 adaptiveTimestep: false
               },
-            nodes:{ 
-                borderWidthSelected:1,
-                value:15,
-                brokenImage:"http://localhost:4200/avatar.png",
-                shape:'circularImage',
-                scaling:{
-                    min:20,
-                    max:50
-                },
-                image:'',
-                // widthConstraint:{
-                //     minimum:15,
-                //     maximum:25
-                // },
-                color: {
-                    border:'#2B7CE9',
-                },
-                size:5,
-                chosen:{
-                    node:true
-                },
-                font:{
-                    size:13
-                }
-            }
+            
           }
        },
     

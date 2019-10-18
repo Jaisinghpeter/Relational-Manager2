@@ -33,13 +33,13 @@ export default Service.extend({
                 name:faker.name.firstName(),
             },
             
-            friends:[105,106,107]
+            friends:[101,105,106,107]
         },
         {
             id:"103",
             details:{
                 college:"Jerusalem",
-               work:faker.company.companyName(),
+               work:"Zoho",
             },
             personalinfo:{
                 gender:"male",
@@ -123,7 +123,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[129]
   
         },
         {
@@ -136,7 +136,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[130]
   
         },
         {
@@ -149,7 +149,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[131,132]
   
         },
         {
@@ -162,7 +162,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[133,134]
   
         },
         {
@@ -175,7 +175,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[135,136]
   
         },
         {
@@ -188,7 +188,7 @@ export default Service.extend({
                 gender:"male",
                 name:faker.name.firstName(),
             },
-            friends:[]
+            friends:[137,138,139]
   
         },
         {
@@ -691,10 +691,10 @@ export default Service.extend({
             }
           });
         this.JSONArray=jsondata
-        console.log(this.JSONArray)
+        // console.log(this.JSONArray)
     },
     getjsonservice(){
-        console.log(this.JSONArray2)
+        // console.log(this.JSONArray2)
         for(var i=0;i<this.JSONArray.length;i++){
             var detail=this.store.createRecord('detail', this.JSONArray[i].details);
               var friend=this.JSONArray[i].friends
