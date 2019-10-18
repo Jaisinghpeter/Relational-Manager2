@@ -18,15 +18,33 @@ export default Component.extend({
     },
     actions:{
         getgraph(){
+          function gettitle(prof){
+            var content=''
+                content=content+"<center>Personal Informations<center><br>"
+                var plam=prof
+                let attributes1 = Ember.get(PersonalINFO, 'attributes')
+                      attributes1.forEach(function(meta, name) {
+                        content=content+name+" : "+plam.personalinfo.get(name)+"<br>"
+                      })
+                attributes1 = Ember.get(Detail, 'attributes')
+                attributes1.forEach(function(meta, name) {
+                  content=content+name+" : "+plam.detail.get(name)+"<br>"
+                  // console.log(name)
+                })
+                return content
+          }
             this.get('cart').getjsonservice()
             var st=this.store
             var valarr=this.store.peekAll('profile')
             var prof=valarr.objectAt(0)
+            console.log(prof)
+            var content=gettitle(prof)
             this.nodeList.pushObject({
                 id:prof.id,
                 college:prof.detail.get('college'),
                 label:prof.personalinfo.get('name'),
-                work:prof.detail.get('name'),
+                work:prof.detail.get('work'),
+                title:content,
                 image:faker.image.avatar(),
                 gender:prof.personalinfo.get('gender'),
             })            
@@ -142,10 +160,12 @@ export default Component.extend({
                       var colordict=getgroupname(val.detail,prof.detail)
                       // console.log(colordict)
                        if(checkifNodePresent(val.friend[i])){
+                         var content=gettitle(prof)
                         templist.pushObject(val.friend[i])
                         nodes.update({
                         id:prof.id,
                         size:40,
+                        title:content,
                         college:prof.detail.get('college'),
                         label:prof.personalinfo.get('name'),
                         work:prof.detail.get('work'),
@@ -203,7 +223,11 @@ export default Component.extend({
               // console.log(params.edge)
               edges.update({id: params.edge, label:' '})
             }),
+            network.on("showPopup", function (id) {
+              
+          }),
             network.on('hoverNode',function(params){
+              network.interactionHandler._checkShowPopup(params.pointer.DOM);
                 var content=''
                 content=content+"<center>Personal Informations<center><br>"
                 var plam=getnodeProfile(params.node)
@@ -216,30 +240,6 @@ export default Component.extend({
                   content=content+name+" : "+plam.detail.get(name)+"<br>"
                   // console.log(name)
                 })
-                $('#mynetwork').qtip(
-                  
-                  {
-                    content:{
-                      text:content
-                    } ,
-                      show: {
-                        event: event.type ,
-                        solo: true,
-                        // event:event.eventPhase
-                      },
-                      hide: {
-                        event:event.type
-                      },
-                      
-                      position: {
-                        my: 'bottom left',
-                        target: 'mouse',
-                        adjust: {
-                          x: 10, y: 10
-                        }
-                      }
-                    }
-                  );
             }),
             network.on('doubleClick',function(params){
               console.log(params)
